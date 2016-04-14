@@ -38,7 +38,7 @@ public class StripeGatewayFactory  extends AbstractGatewayFactory implements Gat
     public PaymentGateway createGateway() {
         Optional<File> tenantConfigurationFile = getTenantConfigurationFile("configuration.yml");
         if (!tenantConfigurationFile.isPresent()) {
-            logger.error("Failed to create Paybox payment gateway : no tenant configuration found");
+            logger.error("Failed to create stripe payment gateway : no tenant configuration found");
             return null;
         }
 
